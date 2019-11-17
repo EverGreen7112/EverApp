@@ -1,0 +1,342 @@
+#+TITLE:EverApp
+* [#A] Team Member & Mentor
+** TODO Forms
+*** TODO [#A] Databases [0/3]
+**** [ ] [#A] Teams
+**** [ ] [#A] Members
+**** [ ] [#B] Mentors
+***** Relation
+***** Phone Number
+***** Email
+*** TODO [#A] Member Form [0/6]
+**** [ ] Form UI
+***** Team Number
+****** [?] First page - redirect to name and logo for confirmation befor econtinuing.
+***** Name in Hebrew
+***** Name in English
+***** Email
+***** Birthday
+***** Address
+**** [ ] Send request for captains
+**** [ ] Insert to database
+**** [ ] Base on an existing Team database (For now insertions will be manual).
+***** [ ] Send request with contact details to the apropriate team
+*** TODO [#B] Mentor Form [0/3]
+**** [ ] Form UI
+***** Name
+***** Related Background
+***** Specific areas you'd like to help with
+**** [ ] Send request to captains
+**** [ ] Add to databse
+*** WAIT [#C] Register Team [0/5]
+**** [-] Team number
+**** [-] Primary color
+**** [-] Secondary Color
+**** [-] Email (for admin account)
+**** [-] Insert to database, inform us, send email with temp password
+** TODO Profiles and Basic user functions
+*** TODO [#A] Group Classes [0/15]
+**** [ ] Group
+***** Members
+****** members: ArrayList<TeamMember>
+****** name: String
+****** colorCode: Color
+***** Constructors
+****** Group(name)
+****** Group(name: String, members: TeamMember...)
+***** Methods
+****** addMembers(Group) -> void
+****** addMembers(TeamMember...) -> void
+****** getters & setters
+******* [ ] name
+******* [ ] color
+**** [ ] Unit
+***** EXTENDS Group
+***** Members:
+****** members: ArrayList<TeamMember>
+****** goals: ArrayList<Goals>
+****** parent: Group
+****** leader: TeamMember
+******* description: String
+***** Constructors
+****** Unit(name: String, parent: Group)
+******* super(name)
+****** Unit(name: String, parent: Group, members: TeamMember...)
+******** super(name, members)
+***** Methods:
+****** addGoal(Goal) -> void
+****** getGoals() -> ArrayList<Goal>
+****** set & get - parent, leader, description
+**** [ ] Crew
+***** EXTENDS Unit
+***** Members
+****** subUnits: ArrayList<Unit>
+***** Constructors
+****** (name: String, hoc: TeamMember)
+******* super(name, currentTeam)
+****** (name: String, hoc: TeamMember)
+***** Methods:
+****** getHOC: TeamMember
+**** [ ] Team
+***** EXTENDS GROUP
+***** Members:
+****** number: int
+****** crews: ArrayList<Crew>
+****** units: ArrayList<Units>
+****** captains: ArrayList<TeamMember>
+****** goals: ArrayList<Goals>
+***** Methods:
+****** getters [0/6]
+******* [ ] number
+******* [ ] crewes
+******* [ ] units
+******* [ ] captains
+******* [ ] goals
+****** add & remove [0/4]
+******* [ ] crewes
+******* [ ] units
+******* [ ] goal
+******* [ ] captain
+*** TODO [#A] User classes [0/4]
+**** [ ] Type [enum]
+***** GUEST
+***** PARENT
+***** SPONSOR
+***** Volunteer
+***** MENTOR
+***** MEMBER
+**** [ ] Person
+***** Members
+****** firstNameHe : String
+****** lastNameHe : String
+****** firstNameEn : String
+****** lastNameEn : String
+****** phoneNumber : String
+****** email : String
+***** Constructors
+****** ()
+****** (fullNameEn : String)
+****** (fullNameEn : String, phoneNumber : String)
+****** (fullNameEn : String, phoneNumber : String, email : String)
+***** Methods
+****** getters & setters - all
+**** [ ] User [Interface]
+***** getType() : Type
+***** setType() : void
+**** [ ] TeamMember
+***** EXTENDS Person
+***** IMPLEMENTS user
+***** Members
+****** password: SecretKey
+****** birthday : Date
+****** home : Location
+****** school : Location
+****** team : Team
+****** homeTeacher : Person
+****** abilityScheduale : ArrayList<Date>
+****** trainings : ArrayList<Training>
+******* software
+******** Java
+******** Robot
+******** Image Recognition
+******** Android
+******** Google Sheets
+******** Bash
+******* Mechatronics
+******** Mechanics
+******** Electronics
+******** Media
+****** crews : ArrayList<Crew>
+****** units : ArrayList<Unit>
+****** trainings : Map<Training, boolean>
+****** trainings : Map<TrainingSet, boolean>
+***** Constructors:
+****** (email : String, password: SecretKey)
+***** Methods:
+****** getters & setters:
+******* birthday
+******* home
+******* school
+******* homeTeacher
+****** getter only:
+******* team
+******* abilityScheduale
+******* trainings
+******* trainingSets
+******* crewes
+******* units
+****** addTo
+******* training (train)
+******* crews (addCrew)
+******* units (addUnit)
+******* ability (addWorkTime)
+****** canWorkAt(Date) -> boolean
+****** hasLearned(Training) -> boolean
+****** hasLearned(TrainingSet) -> boolean
+****** inUnit(Unit) -> boolean
+*** TODO [#A] Basic Profile [0/1]
+**** [ ] Update Details
+*** TODO [#A] Admin  [0/8]
+**** [ ] Update details 
+**** [ ] View all users details
+**** [ ] Update user details
+**** [ ] Assign roles (HOC, Captain, UnitAdmin)
+**** [ ] Accept join requests
+**** [ ] Add units
+**** [ ] Add crewes
+**** [ ] Share membership forms
+***** see https://developer.android.com/studio/write/app-link-indexing
+*** TODO [#B] HOC View [0/4]
+**** [ ] Add members to crew
+**** [ ] Add units
+**** [ ] View and edit crew members
+**** [?] Add peoperties
+** TODO Tasks & Goals
+*** TODO [#A] Base Classes [0/3]
+**** [ ] Goal
+***** Members
+****** recipients (ArrayList<Group>)
+****** tasks (ArrayList<Task>)
+****** parent (Group)
+****** assigner (TeamMember)
+****** title (String)
+****** description (String)
+***** Constructors
+****** (title: String, assigner: TeamMember, parent: Group)
+****** (title: String, assigner: TeamMember, )
+***** Methods
+**** [ ] Training
+***** Members:
+****** requirements : ArrayList<Training>
+****** title : String
+****** description : String
+****** set : TrainingSet
+***** Constructors
+****** (title : String, requirements: Training...)
+***** Methods
+**** [ ] Task
+***** Members
+****** recipients : ArrayList<TeamMember>
+****** goal : Goal
+****** parent : Unit
+****** deadline : Date
+****** schedual : Map<Date, String>
+****** assigner : TeamMember
+****** priority : int
+***** Methods
+****** addRecipients(Group) -> void
+****** addRecipients(TeamMember...teamMembers) -> void
+****** addWorkTime(Date, Time, String) -> void
+****** getCrew() -> Crew
+****** setters & getters [0/6]
+******* [ ] goal
+******* [ ] unit
+******* [ ] deadline
+******* [ ] schedual
+******* [ ] assigner
+******* [ ] priority
+*** TODO [#A] Tasks Overview [0/6]
+**** [ ] UI [0/8]
+***** [ ] Highest priority goal at top
+***** [ ] Below round rectangle buttons for filters.
+***** [ ] Rectangles with title and people assigned
+***** [ ] Sorted by priopirity
+***** [ ] Line goes through top, color coded for crew (or unit if specified for a specific crew)
+***** [ ] Text body colored by priority, or differently for taken and assigned to me
+***** [ ] Sub-Task Progression
+***** [ ] Tapping on task opens details
+****** Description
+****** Deadline
+****** Priority
+****** Crew & Unit
+****** Training required
+****** Who added it
+****** Who took it
+**** [ ] Filter [0/5]
+***** [ ] All
+***** [ ] Assigned
+***** [ ] Crew
+***** [ ] Unit
+***** [ ] Able
+**** [ ] Mark Done [0/3]
+***** [ ] Show Goal Progress
+***** [ ] Add task to user count
+***** [-] XP / Achivement?
+**** [ ] Volunteer [0/5]
+***** [ ] Require Apropriate Training
+***** [ ] Require time
+***** [ ] Notify other assigned people
+***** [ ] Notify assigners and allow them to reject
+***** [ ] Add to databse
+**** [ ] Suggest task (Sent to HOC)
+**** [ ] Suggest goal (Sent to admins and chosen HOCs)
+*** TODO [#A] Admin View [0/7]
+**** [ ] See All Tasks
+**** [ ] Add goals (general) and set their priority.
+**** [ ] Assign Goals - for Crews and Team
+**** [ ] Add Task
+**** [ ] Edit Task
+**** [ ] Add budget tasks
+**** [ ] Stats!
+*** TODO [#B] HOC / UnitAdmin View [0/7]
+**** [ ] View all crew tasks
+**** [ ] Add tasks
+**** [ ] Edit tasks
+**** [ ] Assign tasks
+**** [ ] Set crew goals
+**** [ ] Add budget tasks
+**** [ ] Stats!
+*** TODO [#B] Agenda View
+*** TODO [#B] Miscellaneous
+**** [ ] Notify users when they're assigned a task
+***** (see
+https://firebase.google.com/docs/functions/use-cases?authuser=1#notify_users_when_something_interesting_happens )
+**** [ ] Notify users of new goals
+** WAIT Configurations
+** WAIT Meeting Management
+** WAIT Scouting
+** WAIT Training Summary
+** WAIT Phonebook
+** WAIT Clock in, Clock Out
+* [#B] Guest
+** TODO [#B] Choice Screen [0/4]
+*** [ ] Background Image
+*** [ ] Cotact Us Button
+*** [ ] Learn More Button
+*** [ ] Sign Up for camp button
+** TODO [#B] Contact Us [0/2]
+*** [ ] Background Image
+*** [ ] Form [0/3]
+**** [ ] Email
+**** [ ] Title
+**** [ ] Body
+** TODO [#B] Learn More [0/7]
+*** [ ] *Biggest and boldest* (the main point)
+*** [ ] Software
+*** [ ] Media
+*** [ ] Mechantroics
+**** [ ] Mechanics
+**** [ ] Electronics
+*** [ ] Community!
+*** [ ] Proffesionalism (And Gracious Proffessionalism)
+*** [ ] ROBOT
+** TODO [#B] Sign Up for camp [0/2]
+*** [ ] Form
+**** see https://docs.google.com/forms/d/1-ZTGnF_Kb1a8yVczQfBfI7p4VmN71sZy-7JWTjlZr7I/edit
+*** [ ] Store data on firebase.
+* [#C] Parent
+** WAIT [#C] Parent Form [0/4]
+*** [ ] Form UI
+**** Kid name (private & last)
+**** Full name (private & last)
+**** Related Background? [List + other)
+**** Can connect to sponsors?
+**** Want to join commitee?
+**** Any questions?
+*** [ ] Confirmation (child exists)
+*** [ ] Add to database
+*** [ ] Notify captains and show answer overview, questions and contact information
+* [#C] Sponsor
+** TODO [#B] Sponsor Form [/]
+* [#C] Volunteer
+** TODO [#C] Volunteer orm [0/0]
