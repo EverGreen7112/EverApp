@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0"
+    android:orientation="vertical"
+    tools:context=".GuestActivity">
+
+    <TextView
+        android:id="@+id/welcomeSign"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_weight="1"
+        android:alpha="0"
+        android:padding="@dimen/choice_buttons_vertical_margins"
+        android:text="@string/welcome_sign"
+        android:textSize="48sp"
+        tools:text="@string/welcome_sign" />
+
+    <TextView
+        android:id="@+id/welcomeMsg"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_weight="1"
+        android:alpha="0"
+        android:textSize="18sp"
+        tools:text="@string/welcome_msg" />
+
+    <Button
+        android:id="@+id/learnButton"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_weight="1"
+        android:alpha="0"
+        android:text="@string/learn_choice" />
+
+    <Button
+        android:id="@+id/contactButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:alpha="0"
+        android:text="@string/contact_choice" />
+
+    <Button
+        android:id="@+id/campButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:alpha="0"
+        android:text="@string/camp_choice" />
+
+</LinearLayout>

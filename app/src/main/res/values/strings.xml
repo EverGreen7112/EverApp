@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name" translatable="false">EverApp</string>
+    <string name="member_choose">I am a member</string>
+    <string name="guest_choose">I am a guest</string>
+    <string name="title_activity_login" translatable="false">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_guest" translatable="false">GuestActivity</string>
+</resources>

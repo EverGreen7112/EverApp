@@ -11,7 +11,7 @@
 *** TODO [#A] Member Form [0/6]
 **** [ ] Form UI
 ***** Team Number
-****** [?] First page - redirect to name and logo for confirmation befor econtinuing.
+****** [?] First page - redirect to name and logo for confirmation before continuing.
 ***** Name in Hebrew
 ***** Name in English
 ***** Email
@@ -133,7 +133,7 @@
 ****** school : Location
 ****** team : Team
 ****** homeTeacher : Person
-****** abilityScheduale : ArrayList<Date>
+****** abilitySchedule : ArrayList<Date>
 ****** trainings : ArrayList<Training>
 ******* software
 ******** Java
@@ -183,14 +183,14 @@
 **** [ ] Assign roles (HOC, Captain, UnitAdmin)
 **** [ ] Accept join requests
 **** [ ] Add units
-**** [ ] Add crewes
+**** [ ] Add crews
 **** [ ] Share membership forms
 ***** see https://developer.android.com/studio/write/app-link-indexing
 *** TODO [#B] HOC View [0/4]
 **** [ ] Add members to crew
 **** [ ] Add units
 **** [ ] View and edit crew members
-**** [?] Add peoperties
+**** [?] Add properties
 ** TODO Tasks & Goals
 *** TODO [#A] Base Classes [0/3]
 **** [ ] Goal
@@ -220,7 +220,7 @@
 ****** goal : Goal
 ****** parent : Unit
 ****** deadline : Date
-****** schedual : Map<Date, String>
+****** schedule : Map<Date, String>
 ****** assigner : TeamMember
 ****** priority : int
 ***** Methods
@@ -232,7 +232,7 @@
 ******* [ ] goal
 ******* [ ] unit
 ******* [ ] deadline
-******* [ ] schedual
+******* [ ] schedule
 ******* [ ] assigner
 ******* [ ] priority
 *** TODO [#A] Tasks Overview [0/6]
@@ -240,7 +240,7 @@
 ***** [ ] Highest priority goal at top
 ***** [ ] Below round rectangle buttons for filters.
 ***** [ ] Rectangles with title and people assigned
-***** [ ] Sorted by priopirity
+***** [ ] Sorted by priority
 ***** [ ] Line goes through top, color coded for crew (or unit if specified for a specific crew)
 ***** [ ] Text body colored by priority, or differently for taken and assigned to me
 ***** [ ] Sub-Task Progression
@@ -261,13 +261,13 @@
 **** [ ] Mark Done [0/3]
 ***** [ ] Show Goal Progress
 ***** [ ] Add task to user count
-***** [-] XP / Achivement?
+***** [-] XP / Achievement?
 **** [ ] Volunteer [0/5]
-***** [ ] Require Apropriate Training
+***** [ ] Require appropriate Training
 ***** [ ] Require time
 ***** [ ] Notify other assigned people
 ***** [ ] Notify assigners and allow them to reject
-***** [ ] Add to databse
+***** [ ] Add to database
 **** [ ] Suggest task (Sent to HOC)
 **** [ ] Suggest goal (Sent to admins and chosen HOCs)
 *** TODO [#A] Admin View [0/7]
@@ -296,12 +296,12 @@ https://firebase.google.com/docs/functions/use-cases?authuser=1#notify_users_whe
 ** WAIT Meeting Management
 ** WAIT Scouting
 ** WAIT Training Summary
-** WAIT Phonebook
+** WAIT Phone book
 ** WAIT Clock in, Clock Out
 * [#B] Guest
 ** TODO [#B] Choice Screen [0/4]
 *** [ ] Background Image
-*** [ ] Cotact Us Button
+*** [ ] Contact Us Button
 *** [ ] Learn More Button
 *** [ ] Sign Up for camp button
 ** TODO [#B] Contact Us [0/2]
@@ -314,11 +314,11 @@ https://firebase.google.com/docs/functions/use-cases?authuser=1#notify_users_whe
 *** [ ] *Biggest and boldest* (the main point)
 *** [ ] Software
 *** [ ] Media
-*** [ ] Mechantroics
+*** [ ] Mechantronics
 **** [ ] Mechanics
 **** [ ] Electronics
 *** [ ] Community!
-*** [ ] Proffesionalism (And Gracious Proffessionalism)
+*** [ ] Professionalism (And Gracious Professionalism)
 *** [ ] ROBOT
 ** TODO [#B] Sign Up for camp [0/2]
 *** [ ] Form
@@ -331,7 +331,7 @@ https://firebase.google.com/docs/functions/use-cases?authuser=1#notify_users_whe
 **** Full name (private & last)
 **** Related Background? [List + other)
 **** Can connect to sponsors?
-**** Want to join commitee?
+**** Want to join committee?
 **** Any questions?
 *** [ ] Confirmation (child exists)
 *** [ ] Add to database
