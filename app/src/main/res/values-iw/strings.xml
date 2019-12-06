@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="member_choose">אני משתתף</string>
+    <string name="guest_choose">רו קשרצ</string>
+    <string name="action_sign_in_short">התחבר</string>
+</resources>
