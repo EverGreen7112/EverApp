@@ -11,6 +11,9 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
 
+import com.evergreen.everapp.guest.GuestActivity;
+import com.evergreen.everapp.member.Login;
+
 public class MainActivity extends AppCompatActivity {
 
 

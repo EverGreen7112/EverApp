@@ -1,4 +1,4 @@
-package com.evergreen.everapp.member;
+package com.evergreen.everapp.guest;
 
 import androidx.appcompat.app.AppCompatActivity;
 

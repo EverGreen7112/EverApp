@@ -1,7 +1,8 @@
-package com.evergreen.everapp;
+package com.evergreen.everapp.member;
 
 import android.os.Bundle;
 
+import com.evergreen.everapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
